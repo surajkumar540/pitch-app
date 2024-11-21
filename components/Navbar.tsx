@@ -25,21 +25,19 @@ const Navbar = async () => {
                   await signOut({ redirectTo: "/" });
                 }}
               >
-                <button type="submit">
-                  <span className="max-sm:hidden">Logout</span>
-                  {/* <LogOut className="size-6 sm:hidden text-red-500" /> */}
-                </button>
+                <button type="submit">Logout</button>
               </form>
 
-              {/* <Link href={`/user/${session?.id}`}>
-                <Avatar className="size-10">
+              <Link href={`/user/${session?.id}`}>
+                {/* <Avatar className="size-10">
                   <AvatarImage
                     src={session?.user?.image || ""}
                     alt={session?.user?.name || ""}
                   />
                   <AvatarFallback>AV</AvatarFallback>
-                </Avatar>
-              </Link> */}
+                </Avatar> */}
+                <span>{session?.user?.name}</span>
+              </Link>
             </>
           ) : (
             <form
