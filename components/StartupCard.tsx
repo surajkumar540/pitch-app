@@ -3,23 +3,16 @@ import { EyeIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Author, Startup } from "@/sanity/types";
+import Image from "next/image";
 // import { Skeleton } from "@/components/ui/skeleton";
 
 export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
 
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
-  console.log(post); 
+  console.log(post);
 
-  const {
-    _createdAt,
-    views,
-    author,
-    name,
-    category,
-    _id,
-    image,
-    description,
-  } = post;
+  const { _createdAt, views, author, name, category, _id, image, description } =
+    post;
 
   return (
     <li className="startup-card group">
@@ -40,7 +33,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
             <h3 className="text-26-semibold line-clamp-1">{name}s</h3>
           </Link>
         </div>
-        {/* <Link href={`/user/${author?._id}`}>
+        <Link href={`/user/${author?._id}`}>
           <Image
             src={author?.image!}
             alt={author?.name!}
@@ -48,7 +41,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
             height={48}
             className="rounded-full"
           />
-        </Link> */}
+        </Link>
       </div>
 
       <Link href={`/startup/${_id}`}>
