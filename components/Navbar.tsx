@@ -14,7 +14,7 @@ const Navbar = async () => {
         <div className="flex items-center gap-5 text-black">
           {session && session?.user ? (
             <>
-              <Link href={"/'startup/create"}>
+              <Link href={"/startup/create"}>
                 <span>Create</span>
               </Link>
 
@@ -29,7 +29,7 @@ const Navbar = async () => {
               </form>
 
               <Link href={`/user/${session?.id}`}>
-                {/* <Avatar className="size-10">
+                {/* <Avatar  className="size-10">
                   <AvatarImage
                     src={session?.user?.image || ""}
                     alt={session?.user?.name || ""}
