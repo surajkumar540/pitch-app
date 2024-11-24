@@ -11,7 +11,7 @@ export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
   console.log(post);
 
-  const { _createdAt, views, author, name, category, _id, image, description } =
+  const { _createdAt, views, author, name,title, category, _id, image, description } =
     post;
 
   return (
@@ -30,7 +30,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
             <p className="text-16-medium line-clamp-1">{author?.name}</p>
           </Link>
           <Link href={`/startup/${_id}`}>
-            <h3 className="text-26-semibold line-clamp-1">{name}s</h3>
+            <h3 className="text-26-semibold line-clamp-1">{title}</h3>
           </Link>
         </div>
         <Link href={`/user/${author?._id}`}>

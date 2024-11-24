@@ -1,4 +1,4 @@
-// import StartupForm from "@/components/StartupForm";
+import StartupForm from "@/components/StartupForm";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 
@@ -13,7 +13,7 @@ const Page = async () => {
         <h1 className="heading">Submit Your Startup</h1>
       </section>
 
-      {/* <StartupForm /> */}
+      <StartupForm />
     </>
   );
 };

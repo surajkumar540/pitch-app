@@ -1,5 +1,5 @@
-import { UserIcon } from "lucide-react";
 import { defineField, defineType } from "sanity";
+import { UserIcon } from "lucide-react";
 
 export const author = defineType({
   name: "author",
@@ -10,32 +10,26 @@ export const author = defineType({
     defineField({
       name: "id",
       type: "number",
-      title: "ID",
     }),
     defineField({
       name: "name",
       type: "string",
-      title: "Name",
     }),
     defineField({
       name: "username",
       type: "string",
-      title: "Username",
     }),
     defineField({
       name: "email",
       type: "string",
-      title: "Email",
     }),
     defineField({
       name: "image",
       type: "url",
-      title: "Image",
     }),
     defineField({
       name: "bio",
       type: "text",
-      title: "Bio",
     }),
   ],
   preview: {
